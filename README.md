@@ -59,14 +59,22 @@ public/panoramas/farm_product.jpg
 
 ## 部署到 GitHub Pages
 
-1. 安装依赖并构建：
+推荐在仓库 Settings -> Pages 中选择：
+
+```text
+Source: Deploy from a branch
+Branch: main
+Folder: /docs
+```
+
+项目已经提交了 `docs/` 静态构建目录，可直接用于 GitHub Pages。
+
+本地重新生成 `docs/`：
 
 ```bash
 npm install
-npm run build
+npm run build -- --outDir docs
 ```
-
-2. 将 `dist/` 发布到 GitHub Pages。
 
 如果仓库不是部署在域名根路径，需要在 `vite.config.js` 中设置 `base`，例如：
 
