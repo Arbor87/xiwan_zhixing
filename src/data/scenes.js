@@ -1,8 +1,10 @@
+const panoramaBase = `${import.meta.env.BASE_URL}panoramas/`
+
 export const scenes = [
   {
     id: 'village_gate',
     title: '后溪村入口',
-    image: '/panoramas/village_gate.jpg',
+    image: `${panoramaBase}village_gate.jpg`,
     description:
       '这里是溪智绿行导览的起点。AI 导游会结合村口标识、交通动线和游客兴趣，推荐乡村文化、绿色步道与助农展区的游览路线。',
     aiTips: [
@@ -10,7 +12,7 @@ export const scenes = [
       '可在真实项目中接入语音播报、实时问答和游客画像推荐。',
     ],
     hotspots: [
-      { type: 'scene', pitch: -6, yaw: 42, text: '前往生态步道', target: 'green_path' },
+      { type: 'scene', pitch: -6, yaw: 42, text: '前往校园走廊', target: 'green_path' },
       { type: 'info', pitch: 2, yaw: -25, text: '查看本场景介绍' },
       { type: 'guide', pitch: -10, yaw: 118, text: '打开 AI 导游讲解' },
     ],
@@ -18,7 +20,7 @@ export const scenes = [
   {
     id: 'green_path',
     title: '校园走廊',
-    image: '/panoramas/green_path.jpg',
+    image: `${panoramaBase}green_path.jpg`,
     description:
       '这里展示校园宿舍与教学生活空间的走廊环境。AI 导游可以结合楼栋位置、公共空间、安全提示和校园生活服务进行讲解。',
     aiTips: [
@@ -27,14 +29,14 @@ export const scenes = [
     ],
     hotspots: [
       { type: 'scene', pitch: -4, yaw: 65, text: '前往支教课堂', target: 'classroom' },
-      { type: 'info', pitch: 5, yaw: -50, text: '查看步道介绍' },
+      { type: 'info', pitch: 5, yaw: -50, text: '查看走廊介绍' },
       { type: 'guide', pitch: -8, yaw: 150, text: '打开 AI 导游讲解' },
     ],
   },
   {
     id: 'classroom',
     title: '支教课堂',
-    image: '/panoramas/classroom.jpg',
+    image: `${panoramaBase}classroom.jpg`,
     description:
       '支教课堂用于展示高校实践团队的课程服务、数字素养培训和乡村儿童陪伴计划。AI 导游可模拟老师讲解课程主题。',
     aiTips: [
@@ -50,7 +52,7 @@ export const scenes = [
   {
     id: 'farm_product',
     title: '电商助农展区',
-    image: '/panoramas/farm_product.jpg',
+    image: `${panoramaBase}farm_product.jpg`,
     description:
       '电商助农展区聚合农产品展示、直播带货、品牌故事和订单转化。AI 导游可介绍产品卖点，并模拟智能客服回答游客问题。',
     aiTips: [
